@@ -43,48 +43,6 @@ Make sure you have Python installed on your system. You can download it from the
 
 Once the script is running, it will automate the Blum Crypto game on your Telegram bot. Ensure your Telegram bot is properly set up and configured to work with the Blum Crypto game.
 
-## Contributing
-
-Contributions are welcome! Here's how you can contribute:
-
-1. **Fork the repository**
-
-    Click on the "Fork" button at the top right of this page to create a copy of this repository on your GitHub account.
-
-2. **Clone your forked repository**
-
-    ```sh
-    git clone https://github.com/DarkSkull777/blum-bot.git
-    cd blum-bot
-    ```
-
-3. **Create a new branch for your changes**
-
-    ```sh
-    git checkout -b my-new-feature
-    ```
-
-4. **Make your changes**
-
-    Modify the code and add your new features or improvements.
-
-5. **Commit your changes**
-
-    ```sh
-    git add .
-    git commit -m "Note"
-    ```
-
-6. **Push to your branch**
-
-    ```sh
-    git push origin your-new-feature
-    ```
-
-7. **Create a Pull Request**
-
-    Open a pull request from your forked repository to the original repository.
-
 ### Suggestions and Stars
 
 If you have any suggestions or improvements, feel free to open an issue. If you like this repository and find it helpful, please give it a star ⭐!
@@ -95,7 +53,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or support, please open an issue or contact the repository owner on [<span style="font-size:1.5em;">Telegram</span>](https://t.me/XSkull7).
+For any questions or support, please open an issue or contact the repository owner on [<span style="font-size:1.5em;">Telegram</span>](https://t.me/rus_99_pk).
 
 ---
 
@@ -107,12 +65,9 @@ For any questions or support, please open an issue or contact the repository own
 <summary><strong>Table of Contents</strong></summary>
 
 1. [Features](#features)
-2. [Requirements](#requirements)
-3. [Installation](#installation)
-4. [Download](#Download)
-5. [Usage](#usage)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Contact](#contact)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contact](#contact)
 
 </details>
