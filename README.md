@@ -2,18 +2,11 @@
 
 Welcome to the blum-bot repository, this repo is created to provide a tool or program to click BLUM crypto game automatically.
 
+This is fork of [DarkSkull777](https://github.com/DarkSkull777/blum-bot)
+
 ## Features
 
 - Automates the Blum Crypto game on Telegram.
-- Uses the `termcolor`,`pynput`, `pyautogui`, `pygetwindow` and `keyboard` modules for interaction.
-
-## Requirements
-
-- `termcolor` module 
-- `pyautogui` module
-- `pygetwindow` module
-- `pynput` module
-- `keyboard` module
 
 ## Installation
 
@@ -27,7 +20,7 @@ Make sure you have Python installed on your system. You can download it from the
 
     ```sh
     git clone https://github.com/DarkSkull777/blum-bot.git
-    cd blum-bot
+    cd blum-bot-fork
     ```
 
 2. **Install the required modules**
@@ -35,12 +28,7 @@ Make sure you have Python installed on your system. You can download it from the
     Install the necessary Python modules using `pip`:
 
     ```sh
-    pip install termcolor
-    pip install colorama
-    pip install pynput
-    pip install keyboard
-    pip install pyautogui
-    pip install pygetwindow
+    python3 -m pip install -r requirements.txt
     ```
 
 3. **Run the script**
@@ -50,15 +38,6 @@ Make sure you have Python installed on your system. You can download it from the
     ```sh
     python blumbot.py
     ```
-
-## Download
-
-If you prefer a standalone executable version of Blum Bot that does not require installing Python or any dependencies, you can download `.exe application` from the below:
-
-<a href="https://t.me/bravexploiter/10441">
-    <img src="https://raw.githubusercontent.com/DarkSkull777/blum-bot/main/images/images%20(4)-fotor-bg-remover-202406222099-picsay.png" alt="Download" width="168">
-</a>
-
 
 ## Usage
 
