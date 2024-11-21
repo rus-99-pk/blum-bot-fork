@@ -19,7 +19,7 @@ Make sure you have Python installed on your system. You can download it from the
 1. **Clone the repository**
 
     ```sh
-    git clone https://github.com/DarkSkull777/blum-bot.git
+    git clone git@github.com:rus-99-pk/blum-bot-fork.git
     cd blum-bot-fork
     ```
 
