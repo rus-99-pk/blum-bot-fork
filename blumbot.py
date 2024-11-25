@@ -1,12 +1,6 @@
-from pyautogui import *
-import sys
-import subprocess
-import pyautogui
-import time
+import sys, os, subprocess, pyautogui, time, random
 from termcolor import colored
 from pynput import keyboard
-import time
-import random
 from pynput.mouse import Button, Controller
 
 mouse = Controller()
