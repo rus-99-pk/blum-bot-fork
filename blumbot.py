@@ -27,6 +27,7 @@ def find_and_activate_window(window_name, messages):
     window_rect = None
 
     if platform == "win32":
+        screen_path = "/Temp/sceenshot.png"
         import pygetwindow as gw
         # Finding windows with a title
         windows = gw.getWindowsWithTitle(window_name)
@@ -42,6 +43,7 @@ def find_and_activate_window(window_name, messages):
                 telegram_window.restore()
 
     elif platform == "darwin":
+        screen_path = "/tmp/sceenshot.png"
         # AppleScript for Mac OS window activation
         script = f"""
         tell application "System Events"
@@ -58,6 +60,7 @@ def find_and_activate_window(window_name, messages):
             pass
 
     elif platform.startswith("linux"):
+        screen_path = "/tmp/sceenshot.png"
         try:
             # Using wmctrl and xwininfo for get window info in Linux
             result = subprocess.run(['wmctrl', '-l'], capture_output=True, text=True)
@@ -83,12 +86,12 @@ def find_and_activate_window(window_name, messages):
         except FileNotFoundError:
             print(messages["wmctrl_xwininfo_err_msg"])
     
-    return window_rect
+    return window_rect, screen_path
 
-def take_screenshot(window_rect, messages):
+def take_screenshot(window_rect, messages, screen_path):
     if window_rect:
         scrn = pyautogui.screenshot(region=window_rect)
-        scrn.save("screenshot.png")
+        scrn.save(screen_path)
     else:
         print(messages["fail_capture_msg"])
 
@@ -200,9 +203,9 @@ else:
         while True:
             if paused:
                 continue
-            window_rect = find_and_activate_window(window_name, messages)
+            window_rect, screen_path = find_and_activate_window(window_name, messages)
             try:
-                scrn = take_screenshot(window_rect, messages)
+                scrn = take_screenshot(window_rect, messages, screen_path)
             except UnboundLocalError:
                 print (messages["close_bot_msg"])
                 os._exit(0)
@@ -216,7 +219,8 @@ else:
             for x in range(0, width, 20):
                 for y in range(0, height, 20):
                     r, g, b = scrn.getpixel((x, y))
-                    if (b in range(0, 125)) and (r in range(102, 220)) and (g in range(200, 255)):
+                    # print (r, g, b)
+                    if ((r in range(102, 220)) and (g in range(200, 255)) and (b in range(0, 125))) or ((r in range(109, 255)) and (g in range(51, 119)) and (b in range(50, 136))):
                         screen_x = window_rect[0] + x
                         screen_y = window_rect[1] + y
                         click(screen_x + 4, screen_y)
